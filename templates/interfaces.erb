@@ -1,0 +1,16 @@
+# This file is managed by puppet! Do not change!
+#
+# Shorewall version 4 - Interfaces File
+#
+# For information about entries in this file, type "man shorewall-interfaces"
+#
+# The manpage is also online at
+# http://www.shorewall.net/manpages/shorewall-interfaces.html
+#
+###############################################################################
+#ZONE	INTERFACE	BROADCAST	OPTIONS
+
+# include all other interfaces
+SHELL cat <%= @interfacesddir %>/*
+
+#LAST LINE -- DO NOT REMOVE

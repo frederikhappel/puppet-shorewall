@@ -1,0 +1,19 @@
+# This file is managed by puppet! Do not change!
+module shorewall_script_exec 1.0.2;
+
+require {
+  type shorewall_t;
+  type sysfs_t;
+  type usr_t;
+  type initrc_tmp_t;
+  type openshift_initrc_tmp_t;
+  class file { execute execute_no_trans read write };
+  class dir { search getattr };
+  class process { signal };
+}
+
+#============= shorewall_t ==============
+allow shorewall_t sysfs_t:dir { search getattr };
+allow shorewall_t usr_t:file { execute execute_no_trans };
+allow shorewall_t initrc_tmp_t:file { read write };
+allow shorewall_t self:process signal;

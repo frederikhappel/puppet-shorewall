@@ -1,0 +1,10 @@
+# This file is managed by puppet! Do not change!
+#SOURCE DEST    POLICY    LOG LEVEL
+<% [@src].flatten.each do |src_zone| -%>
+<% [@dst].flatten.each do |dst_zone| -%>
+<%= src_zone %>  <%= dst_zone %>  <%= @action.upcase %>  <%= @logger %>
+<% if @bidirectional -%>
+<%= dst_zone %>  <%= src_zone %>  <%= @action.upcase %>  <%= @logger %>
+<% end -%>
+<% end -%>
+<% end -%>

@@ -1,0 +1,8 @@
+# This file is managed by puppet! Do not change!
+###############################################################################################################
+#ACTION        SOURCE          DEST          PROTO DEST  SOURCE   ORIGINAL  RATE   USER/  MARK  CONNLIMIT  TIME
+#                                                  PORT  PORT(S)  DEST      LIMIT  GROUP
+<%= @action %>  <%= [@src].flatten.compact.join(',') %>  <%= [@dst].flatten.compact.join(',') %>  <%= [@proto].flatten.compact.join(',') %>  <%= [@dst_port].flatten.compact.join(',') %>  <%= [@src_port].flatten.compact.join(',') %>  <%= [@dst_orig].flatten.compact.join(',') %>  <%= @rate_limit %>  <%= @user_group %>  <%= @mark %>  <%= @conn_limit %>  <%= @time %>
+<% if @bidirectional -%>
+<%= @action %>  <%= [@dst].flatten.compact.join(',') %>  <%= [@src].flatten.compact.join(',') %>  <%= [@proto].flatten.compact.join(',') %>  <%= [@dst_port].flatten.compact.join(',') %>  <%= [@src_port].flatten.compact.join(',') %>  <%= [@dst_orig].flatten.compact.join(',') %>  <%= @rate_limit %>  <%= @user_group %>  <%= @mark %>  <%= @conn_limit %>  <%= @time %>
+<% end -%>

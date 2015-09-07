@@ -1,0 +1,5 @@
+# This file is managed by puppet! Do not change!
+###############################################################################
+#ZONE TYPE    OPTIONS   IN         OUT
+#                       OPTIONS    OPTIONS
+<%= @name %><% if !@parents.empty? %>:<%= @parents.flatten.compact.join(",") %><% end %>  <%= @zonetype %>  <%= @options.flatten.compact.join(",") %>  <%= @inoptions.flatten.compact.join(",") %>  <%= @outoptions.flatten.compact.join(",") %>

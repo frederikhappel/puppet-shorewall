@@ -1,0 +1,5 @@
+# This file is managed by puppet! Do not change!
+#############################################################################################
+#INTERFACE SOURCE          ADDRESS       PROTO PORT(S) IPSEC MARK USER/
+#                                                       GROUP
+<%= @dst %>  <%= [@src].flatten.compact.join(',') %>  <%= @snat_address %>

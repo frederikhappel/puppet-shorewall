@@ -1,0 +1,4 @@
+# This file is managed by puppet! Do not change!
+###############################################################################
+#TYPE         ZONE        GATEWAY             GATEWAY ZONE
+<%= @tunnel_type %>  <%= @parent_zones.flatten.compact.join(',') %>  <%= @gateways.flatten.compact.join(',') %>  <%= @gateway_zones.empty? ? '-' : @gateway_zones.flatten.compact.join(',') %>
